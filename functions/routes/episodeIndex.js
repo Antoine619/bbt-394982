@@ -3,7 +3,8 @@ const bbt = require('big-bang-theory');
 const episodeIndex = (req, res) => {
   res.status(200).json({
     success: true,
-    index: req.parms.index,
+    index: req.params.index,
+    data: bbt._embedded.episodes[req.params.index]
   });
 }
 
