@@ -5,7 +5,8 @@ const episodeAirTime = (req, res) =>{
         res.status(200).json({
           success: true,
           index: req.params.index,
-          data: bbt._embedded.episodes[req.params.airtime]
+          airdate: bbt._embedded.episodes[req.params.index].airdate + " through " + bbt._embedded.episodes[req.params.index].airstamp,
+          airtime: bbt._embedded.episodes[req.params.index].airtime
         });
       }
       else {
