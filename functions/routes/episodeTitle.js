@@ -10,19 +10,18 @@ const episodeTitle = (req, res) => {
              titleList.push(title);
         };
     }
-    console.log(titleList.length)
-    if(titleList.length < 0) {
-        res.status(200).json({
-            success: false,
-            message: "no title matching keyword",
-        });
-      } else {
+        if(title != [])
         res.status(200).json({
             success: true,
             index: req.params.index,
             title: titleList,
         })
-    }
+       else {
+        res.status(200).json({
+            success: false,
+            message: "no description matching keyword",
+        });
+      }
 }
 
 

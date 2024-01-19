@@ -10,12 +10,13 @@ const episodeDesc = (req, res) => {
              episodeList.push(summary);
         };
     }
+        if(summary != [])
         res.status(200).json({
             success: true,
             index: req.params.index,
             summary: episodeList,
         })
-       if(summary = "") {
+       else {
         res.status(200).json({
             success: false,
             message: "no description matching keyword",

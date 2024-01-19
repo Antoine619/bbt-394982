@@ -14,7 +14,7 @@ const episodeAirTime = (req, res) =>{
         res.status(200).json({
           success: false,
           index: req.params.index,
-          message: "index value out of range. There are only 279 episodes of this show"
+          message: "index value out of range. There are only 279 episodes."
         })
       }
 }
